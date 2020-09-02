@@ -46,4 +46,8 @@ public :
 	FORCEINLINE bool GetGameOver() const
 	{ return bIsGameOver; }
 
+	// 게임 점수 초기화
+	FORCEINLINE void InitializeGameScore()
+	{ CurrentScore = 0.0f; }
+
 };

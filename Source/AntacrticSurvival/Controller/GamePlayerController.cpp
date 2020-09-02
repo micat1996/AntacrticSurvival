@@ -40,6 +40,8 @@ void AGamePlayerController::Tick(float DeltaTime)
 void AGamePlayerController::CreateWdigetInScreen()
 {
 	CreateWidget<UGameWidget>(this, GameWidgetClass)->AddToViewport();
+	SetInputMode(FInputModeGameOnly());
+	bShowMouseCursor = false;
 }
 
 void AGamePlayerController::LoadAsset()

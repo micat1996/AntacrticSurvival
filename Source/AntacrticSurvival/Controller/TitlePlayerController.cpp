@@ -38,4 +38,10 @@ void ATitlePlayerController::CreateWidgetInScreen()
 {
 	TitleWidget = CreateWidget<UTitleWidget>(this, TitleWidgetClass);
 	TitleWidget->AddToViewport();
+
+	// 입력 모드를 UI 모드로 설정
+	SetInputMode(FInputModeUIOnly());
+
+	// 마우스를 표시합니다.
+	bShowMouseCursor = true;
 }
