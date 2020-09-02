@@ -73,5 +73,15 @@ void UGameWidget::GameOver()
 	{
 		// 보이는 상태로 변경합니다.
 		GameOverCanvas->SetVisibility(ESlateVisibility::Visible);
+
+		// 3 초 뒤 타이틀 맵으로 이동되도록 합니다.
+		FTimerHandle handle;
+		GetWorld()->GetTimerManager().SetTimer(handle, this,
+			&UGameWidget::ChangeToTileMap, 3.0f);
 	}
+}
+
+void UGameWidget::ChangeToTileMap()
+{
+	UGameplayStatics::OpenLevel(GetWorld(), TEXT("TitleMap"));
 }

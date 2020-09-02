@@ -45,5 +45,5 @@ private :
 	void MoveHungryImage();
 
 	void GameOver();
-
+	void ChangeToTileMap();
 };
